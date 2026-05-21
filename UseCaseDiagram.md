@@ -1,3 +1,4 @@
+```mermaid
 graph LR
     사용자((플레이어))
     
