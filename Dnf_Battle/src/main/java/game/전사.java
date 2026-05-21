@@ -4,8 +4,7 @@ public class 전사 extends 캐릭터 {
     public 전사(String 캐릭터명, int 레벨) {
         this.캐릭터명 = 캐릭터명;
         this.레벨 = 레벨;
-        
-        능력치초기화(); // 순차도의 Self-Message (W -> W) 반영
+        능력치초기화(); // Self-Message
     }
 
     private void 능력치초기화() {
