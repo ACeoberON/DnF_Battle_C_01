@@ -34,7 +34,7 @@
 
     모든 명칭은 한글로 : Use Case명, 클래스명, 속성명, 행위명 (데이터타입은 영문)
 
-    GitHub에 Repository 생성하여 산출물 관리 (Repository명 : "Dnf_Battle_A_0111")
+    GitHub에 Repository 생성하여 산출물 관리 (Repository명 : "Dnf_Battle_C_01")
 
     사용사례 다이어그램(Use Case Diagram)을 정의하시오.
 
@@ -61,3 +61,7 @@
     순차도(Sequence Diagram)를 기반으로 구현하시오. (캐릭터생성, 몬스터공격)
 
     실행은 JSP 로 실행할 것. (처리 결과가 출력되도록 할 것)
+
+    모든 설계 및 구현은 위 요구사항 범위내에서 수행할 것
+
+    설계와 구현의 일관성을 유지할 것
