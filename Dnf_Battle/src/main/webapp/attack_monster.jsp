@@ -1,32 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="game.캐릭터" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 
-<%-- 앞 페이지와 동일한 id와 scope를 사용하여 세션에 저장된 객체를 그대로 가져옵니다 --%>
-<jsp:useBean id="control" class="game.전투" scope="session" />
+<jsp:useBean id="control" class="game.전투" scope="page" />
 
 <%
     String action = request.getParameter("action");
     String playerId = request.getParameter("playerId");
-    if (playerId == null) playerId = "hero"; // 기본값
+    if (playerId == null) playerId = "hero";
     
     String message = "전투 준비 완료. 공격 명령을 내려주세요.";
 
-    // 공격 버튼을 눌렀을 때 처리
     if ("attack".equals(action)) {
-        message = control.몬스터공격(playerId);
+        // 1. 세션에 저장해둔 캐릭터 객체를 꺼내옴
+        캐릭터 myChar = (캐릭터) session.getAttribute("myCharacter");
+        
+        // 2. 다이어그램 명세대로 파라미터 2개(ID, 캐릭터객체)를 전달하여 호출
+        message = control.몬스터공격(playerId, myChar);
     }
 %>
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>몬스터 공격</title>
-</head>
 <body>
     <h2>2단계: 몬스터 공격</h2>
-    
-    <div style="border: 1px solid #ff9999; padding: 10px; margin-bottom: 15px; background-color: #fff0f0;">
+    <div style="border: 1px solid #ff9999; padding: 10px; margin-bottom: 15px;">
         <strong>전투 결과:</strong> <%= message %>
     </div>
 

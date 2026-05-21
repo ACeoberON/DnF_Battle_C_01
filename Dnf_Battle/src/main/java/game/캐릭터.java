@@ -1,15 +1,13 @@
 package game;
 
 public abstract class 캐릭터 {
-    protected String 캐릭터명;
-    protected int 레벨;
-    protected int HP;
-    protected int 공격력;
-    protected String 스킬명; // 💡 웹 출력을 위해 스킬명 속성 추가
+    // 다이어그램 명세 반영: 모든 속성 '+' (public)
+    public String 캐릭터명;
+    public int 레벨;
+    public int HP;
+    public int 공격력;
+    public String 스킬명; // 화면 출력을 위한 추가 속성
 
+    // 다이어그램 명세 반영: +«abstract» 스킬발동() double
     public abstract double 스킬발동();
-    
-    public int getHP() { return HP; }
-    public int get공격력() { return 공격력; }
-    public String get스킬명() { return 스킬명; } // 💡 스킬명 Getter
 }
