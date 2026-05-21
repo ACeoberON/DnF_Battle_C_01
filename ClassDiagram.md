@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
     class Create_Character_UI {
         <<boundary>>
