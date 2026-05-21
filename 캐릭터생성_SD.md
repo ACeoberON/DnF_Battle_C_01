@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     actor Player as 플레이어 
     participant System as 시스템 
