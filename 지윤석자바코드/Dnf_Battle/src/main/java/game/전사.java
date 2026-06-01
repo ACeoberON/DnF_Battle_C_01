@@ -16,4 +16,9 @@ public class 전사 extends 캐릭터 {
     public double 스킬발동() {
         return this.공격력 * 1.5;
     }
+
+    @Override
+    public String toString() {
+        return "검휘두르기!";
+    }
 }

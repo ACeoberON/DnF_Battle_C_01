@@ -44,12 +44,7 @@ public class 전투 {
 
         double 데미지 = 캐릭터객체.스킬발동();
 
-        String 사용스킬 = "";
-        if (캐릭터객체 instanceof 전사) {
-            사용스킬 = "검휘두르기!";
-        } else if (캐릭터객체 instanceof 마법사) {
-            사용스킬 = "파이어볼!";
-        }
+        String 사용스킬 = 캐릭터객체.toString();
 
         if (데미지 >= 200) {
             return "🔥 [" + 사용스킬 + "] 명중! 데미지: " + 데미지 + " ➔ [S급 전투 결과]";

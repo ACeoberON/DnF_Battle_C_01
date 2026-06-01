@@ -16,4 +16,9 @@ public class 마법사 extends 캐릭터 {
     public double 스킬발동() {
         return this.공격력 * 2.0;
     }
+
+    @Override
+    public String toString() {
+        return "파이어볼!";
+    }
 }
